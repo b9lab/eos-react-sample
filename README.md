@@ -14,6 +14,9 @@ Run the App using:
 npm start
 ```
 
+## Dependencies
+You should have a running local testnet with the survey contract deployed before starting the App.
+The scripts to create and start the local testnet in our [eos-dev-scripts](https://github.com/b9lab/eos-dev-scripts) repository.
 
 ## Preview
 ![App screenshot](https://github.com/b9lab/eos-react-sample/raw/master/sample-screen.png "Sample screenshot")
