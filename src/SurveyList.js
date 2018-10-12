@@ -24,7 +24,6 @@ export default class SurveyList extends Component {
       table:'sur',
       json:true
     }).then((res) => {
-      console.log(res);
       this.setState({ surveys: res.rows, eos:this.state.eos});
     });
   }
