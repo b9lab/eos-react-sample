@@ -38,15 +38,11 @@ export default class SurveyAnswerList extends Component {
   }
 
   handleSubmit(event) {
-    console.log("EVENT");
-    console.log(this.who.value);
     event.preventDefault();
 
-    let who = this.who.value;
-    let response = this.response.value;
-    let surveyNumber = this.surveyNumber.value;
-
-    let self = this;
+    let who = event.target.who.value;
+    let response = event.target.response.value;
+    let surveyNumber = event.target.surveyNumber.value;
 
     this.state.eos.contract('survey').then(survey => {
       survey.answer(
@@ -92,13 +88,13 @@ const AnswerForm = ({survey, self}) => (
     <div className="survey-form-table">
       <div className="survey-form-row">
         <span className="table-field">
-          <input type="text" ref={(input) => self.who = input}/>
+          <input type="text" name="who"/>
         </span>
         <span className="table-field">
-          <input type="text" ref={(input) => self.response = input}/>
+          <input type="text" name="response"/>
         </span>
         <span className="table-field">
-          <input type="hidden" value={survey.surveyNumber} ref={(input) => self.surveyNumber = input}/>
+          <input type="hidden" value={survey.surveyNumber} name="surveyNumber"/>
           <input type="submit" value="save answer"/>
         </span>
       </div>
