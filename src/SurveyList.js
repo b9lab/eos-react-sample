@@ -24,6 +24,7 @@ export default class SurveyList extends Component {
       table:'sur',
       json:true
     }).then((res) => {
+      console.log(res);
       this.setState({ surveys: res.rows, eos:this.state.eos});
     });
   }
@@ -57,15 +58,15 @@ export default class SurveyList extends Component {
       <div>
         <b>Survey data - {this.state.surveys.length} entries</b>
         <SurveyTable data={this.state.surveys}/>
-        <SurveyForm self={this}></SurveyForm>
+        <SurveyForm handler={this.handleSubmit}></SurveyForm>
       </div>
     )
   }  
 
 }
 
-const SurveyForm = ({survey, self}) => (
-  <form onSubmit={self.handleSubmit}>
+const SurveyForm = ({survey, handler}) => (
+  <form onSubmit={handler}>
     <div className="survey-form-table">
       <div className="survey-form-row survey-form-row">
       <span className="table-field">

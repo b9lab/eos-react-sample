@@ -32,7 +32,7 @@ export default class SurveyAnswerList extends Component {
     return (
       <div>
         <SurveyAnswerTable data={this.state.answers} />
-        <AnswerForm survey={this.state.survey} self={this}/>
+        <AnswerForm survey={this.state.survey} handler={this.handleSubmit}/>
       </div>
     )
   }
@@ -83,8 +83,8 @@ const SurveyAnswerTable = ({data}) => (
 
 
 
-const AnswerForm = ({survey, self}) => (
-  <form onSubmit={self.handleSubmit}>
+const AnswerForm = ({survey, handler}) => (
+  <form onSubmit={handler}>
     <div className="survey-form-table">
       <div className="survey-form-row">
         <span className="table-field">

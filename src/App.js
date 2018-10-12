@@ -7,7 +7,7 @@ import {EosContext} from "./eos-context.js"
 
 import SurveyList from './SurveyList.js';
 
-const eos = Eos({keyProvider: "5Kb71WKbheKKjHUjUHQ3cBugHB4k6q4HhxFLdAAeP4DqUiF9GaG"});
+const eos = Eos({keyProvider: "ADD-YOUR-KEY-HERE"});
 
 class App extends Component {
   render() {
