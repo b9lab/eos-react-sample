@@ -1,4 +1,6 @@
-This project contains a sample eosio react application, built in our [eosio free course on B9lab Academy](https://academy.b9lab.com/courses/course-v1:B9lab+EOSIO-FREE+2018-09/about). It is only a sample and should not be used as a template for a production application! It's main purpose is to demonstrate one possible approach to use react for a simple eosio app, concentrating on the actual eosio interaction and simplifying the surroundings.
+This project contains a sample eosio react application, built in our [eosio free course on B9lab Academy](https://academy.b9lab.com/courses/course-v1:B9lab+EOSIO-FREE+2018-09/about). It demonstrates how to interact with a smart contract using the [eosjs library](https://github.com/EOSIO/eosjs) through a UI build with [React](https://github.com/facebook/react).
+
+It is just an example to illustrate basic interaction, neglecting account selection, error handling, etc. 
 
 ## Install and usage
 Install with:
@@ -12,8 +14,6 @@ Run the App using:
 npm start
 ```
 
-## Dependencies
-This project uses the [react-scripts](https://www.npmjs.com/package/react-scripts) and [eosjs](https://www.npmjs.com/package/eosjs). You will also need node and npm.
 
 ## Preview
 ![App screenshot](https://github.com/b9lab/eos-react-sample/raw/master/sample-screen.png "Sample screenshot")
